@@ -83,7 +83,15 @@
     }
   </style>
 </head>
+<script>
+  // Récupérer le bouton
+  const bouton = document.getElementById('monBouton');
 
+  // Ajouter un événement au clic
+  bouton.addEventListener('click', function() {
+    alert('Bravo, tu as cliqué sur le bouton !');
+  });
+</script>
 <body>
 
   <header class="header">
@@ -93,7 +101,7 @@
 
   <main class="container">
     <img class="profile-img" src="https://via.placeholder.com/160" alt="Moi">
-
+<buttons id="monBouton">clique-moi</buttons>
     <h2>À propos de moi</h2>
     <p>
       Je suis débutant en développement web.  
