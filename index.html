@@ -105,7 +105,16 @@
       <li>CSS</li>
       <li>Sites responsives</li>
     </ul>
+<form id="monFormulaire">
+  <label>
+    Ton prénom :
+    <input type="text" id="prenom" required>
+  </label>
+  <br><br>
+  <button type="submit">Envoyer</button>
+</form>
 
+<p id="message"></p>
     <h2>Objectif</h2>
     <p>
       Devenir développeur web et créer des applications utiles.
@@ -118,7 +127,25 @@
       </a>
     </div>
   </main>
+<script>
+  const formulaire = document.getElementById('monFormulaire');
+  const prenom = document.getElementById('prenom');
+  const message = document.getElementById('message');
 
+  if (formulaire && prenom && message) {
+    formulaire.addEventListener('submit', function (event) {
+      event.preventDefault();
+
+      if (prenom.value.trim() === '') {
+        message.textContent = '❌ Veuillez entrer votre prénom';
+        message.style.color = 'red';
+      } else {
+        message.textContent = '✅ Bienvenue ' + prenom.value;
+        message.style.color = 'green';
+      }
+    });
+  }
+</script>
   <footer>
     © 2025 - Mon premier site personnel
   </footer>
