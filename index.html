@@ -92,28 +92,13 @@
   </header>
 
   <main class="container">
-    <button id="monBouton">Clique-moi</button>
-      <script>
-  // Récupérer le bouton
-  const bouton = document.getElementById('monBouton');
-
-  // Ajouter un événement au clic
-  bouton.addEventListener('click', function() {
-    alert('Bravo, tu as cliqué sur le bouton !');
-  });
-</script>
     <img class="profile-img" src="https://via.placeholder.com/160" alt="Moi">
     <h2>À propos de moi</h2>
-     <p id="monTexte"> Je suis un débutant</p>
-      <button id="changerTexte"> Changer le texte</button>
-  <script>
-  const texte = document.getElementById('monTexte');
-  const bouton = document.getElementById('changerTexte');
+     <p id="texteCache" style="display: none;">
+  Fayçol 🖕 😁👀
+</p>
 
-  bouton.addEventListener('click', function() {
-    texte.textContent='Le texte a changé ! 🎉';
-  });
-  </script>
+<button id="boutonAfficher">Clique-ici</button>
     <h2>Compétences</h2>
     <ul>
       <li>HTML</li>
@@ -138,8 +123,14 @@
     © 2025 - Mon premier site personnel
   </footer>
   <script>
-  //code JavaScript ici
-  alert("Bienvenue sur mon site!");
+  const texte = document.getElementById('texteCache');
+  const bouton = document.getElementById('boutonAfficher');
+
+  if (texte && bouton) {
+    bouton.addEventListener('click', function () {
+      texte.style.display = 'block';
+    });
+  }
 </script>
 </body>
 </html>
