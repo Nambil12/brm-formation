@@ -83,15 +83,7 @@
     }
   </style>
 </head>
-<script>
-  // Récupérer le bouton
-  const bouton = document.getElementById('monBouton');
 
-  // Ajouter un événement au clic
-  bouton.addEventListener('click', function() {
-    alert('Bravo, tu as cliqué sur le bouton !');
-  });
-</script>
 <body>
 
   <header class="header">
@@ -100,8 +92,8 @@
   </header>
 
   <main class="container">
+    <button id="monBouton">Clique-ici</button>
     <img class="profile-img" src="https://via.placeholder.com/160" alt="Moi">
-<buttons id="monBouton">clique-moi</buttons>
     <h2>À propos de moi</h2>
      <p id="monTexte"> Texte initial</p>
       <button id="changerTexte"> Changer le texte</button>
@@ -133,6 +125,15 @@
   <footer>
     © 2025 - Mon premier site personnel
   </footer>
+  <script>
+  // Récupérer le bouton
+  const bouton = document.getElementById('monBouton');
+
+  // Ajouter un événement au clic
+  bouton.addEventListener('click', function() {
+    alert('Bravo, tu as cliqué sur le bouton !');
+  });
+</script>
 <script>
   //code JavaScript ici
   alert("Bienvenue sur mon site!");
